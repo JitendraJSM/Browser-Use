@@ -40,17 +40,29 @@ A Python project that uses the [browser-use](https://github.com/browser-use/brow
    pip install -r requirements.txt
    ```
 
-5. Set up environment variables:
+5. Install Chromium for Playwright:
+
+   ```bash
+   playwright install chromium
+   ```
+
+6. Set up environment variables:
    - Copy `.env-sample` to `.env`
    - Replace `your-api-key` in `.env` with your Google AI Studio API key
 
 ## Usage
 
-Run the main script:
+1. First, activate the virtual environment:
 
-```bash
-python main.py
-```
+   ```bash
+   myenv\Scripts\activate
+   ```
+
+2. Then run the main script:
+
+   ```bash
+   python main.py
+   ```
 
 ## Dependencies
 

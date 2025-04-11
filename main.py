@@ -1,3 +1,4 @@
+# This Script opens chormium web browser not google chrome of your system
 from langchain_google_genai import ChatGoogleGenerativeAI
 from browser_use import Agent
 from pydantic import SecretStr
@@ -16,7 +17,7 @@ llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp', api_key=SecretStr(os.
 async def main():
     # Create agent with the model
     agent = Agent(
-        task="Open https://www.youtube.com and search videos for top movies on channel @Mr20s get on the first video give me the first 10 comments in list format",
+        task="Open https://www.youtube.com and search videos for top movies Mr20s get on the first video give me the first 10 comments in list format",
         llm=llm
     )
     result = await agent.run()
