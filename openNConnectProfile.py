@@ -1,3 +1,4 @@
+# This Script opens a specified chrome profile of your system.
 from langchain_google_genai import ChatGoogleGenerativeAI
 from browser_use import Agent, Browser, BrowserConfig
 from pydantic import SecretStr
@@ -20,9 +21,14 @@ api_key = os.getenv("GEMINI_API_KEY")
 llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp', api_key=SecretStr(os.getenv('GEMINI_API_KEY')))
 
 async def main():
+    task = 'Check URL of all opened tabs is there any tab with url "chrome://privacy-sandbox-dialog/notice" if yes then click on button having text "Got it"'
+    task += 'Open https://www.youtube.com'
+    task += 'Search for "top 10 movies"'
+    task += 'Click on the first video not a youtube short video'
+    task += 'Give me the first 10 comments in list format'
     # Create agent with the model
     agent = Agent(
-        task="Open https://www.youtube.com and search videos for top movies Mr20s get on the first video give me the first 10 comments in list format",
+        task=task,
         llm=llm,
         browser=browser
     )
