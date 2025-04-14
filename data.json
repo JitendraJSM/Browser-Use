@@ -1,0 +1,10 @@
+{
+  "memberToAdd": {
+    "_id": "67fb9d5dfb6914ddbc02d0c4",
+    "gmail": "dadseema054@gmail.com",
+    "recoveryMailVerified": false,
+    "systemProfiles": []
+  },
+  "nextProfileNumber": 2,
+  "task": "Check URL of all opened tabs is there any tab with url 'chrome://privacy-sandbox-dialog/notice' if yes then click on button having text 'Got it', Open 'https://www.youtube.com', Search for 'top 10 movies', Click on the first video not a youtube short video, scarpe the first 10 comments in and download that as json file."
+}
